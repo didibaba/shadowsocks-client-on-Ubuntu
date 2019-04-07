@@ -79,7 +79,6 @@ sudo service polipo restart
 ```
 
 - 设置环境变量（可添加至~/.bashrc文件中使所有shell均可实现全局SOCKS5访问）
-
 ```json
 export HTTP_PROXY="http://127.0.0.1:8123"
 export HTTPS_PROXY="https://127.0.0.1:8123"
