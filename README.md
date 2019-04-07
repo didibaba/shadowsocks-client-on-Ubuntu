@@ -41,11 +41,9 @@ sudo ss-local
 sudo vim /etc/rc.local
 ```
 
-add
+add `sudo ss-local` before `exit 0`
 
-```bash
-sudo ss-local
-```
+
 
 ## Config google chrome
 
