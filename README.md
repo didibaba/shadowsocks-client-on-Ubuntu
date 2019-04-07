@@ -47,6 +47,8 @@ add `sudo ss-local` before `exit 0`
 
 ## Config google chrome
 
+![chrome_img](https://github.com/didibaba/shadowsocks-client-on-Ubuntu-16.04/blob/master/web/chrome.png)
+
 ## Global proxy
 
 - 安装polipo
