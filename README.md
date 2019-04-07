@@ -35,6 +35,18 @@ or for default `sudo vim /etc/default/shadowsocks-libev`
 sudo ss-local
 ```
 
+## start-up
+
+```bash
+sudo vim /etc/rc.local
+```
+
+add
+
+```bash
+sudo ss-local
+```
+
 ## Config google chrome
 
 ## Global proxy
