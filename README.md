@@ -79,8 +79,20 @@ sudo service polipo restart
 ```
 
 - 设置环境变量（可添加至~/.bashrc文件中使所有shell均可实现全局SOCKS5访问）
-export http_proxy="http://127.0.0.1:8123"
-export https_proxy="https://127.0.0.1:8123"
+
+```json
+export HTTP_PROXY="http://127.0.0.1:8123"
+export HTTPS_PROXY="https://127.0.0.1:8123"
+```
+但是这样git clone 就用不了了，必须
+
+```bash
+unset HTTP_PROXY
+unset HTTPS_PROXY
+```
 
 - 检测一下是否可以通过socks5协议获取google主页面
+
+```json
 curl www.google.com
+```
