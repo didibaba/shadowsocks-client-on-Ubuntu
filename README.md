@@ -85,7 +85,6 @@ export HTTP_PROXY="http://127.0.0.1:8123"
 export HTTPS_PROXY="https://127.0.0.1:8123"
 ```
 但是这样git clone 就用不了了，必须
-
 ```bash
 unset HTTP_PROXY
 unset HTTPS_PROXY
