@@ -17,13 +17,13 @@ sudo vim /etc/shadowsocks-libev/config.json
 
 ```json
 {
- "server":"ukss.southeastasia.cloudapp.azure.com",
- "server_port":22557,
- "local_address":"127.0.0.1",
- "local_port":10800,
- "password":"(2WHPaS$w0rd)",
+ "server":"***",
+ "server_port":***,
+ "local_address":"***",
+ "local_port":***,
+ "password":"***",
  "timeout":60,
- "method":"aes-256-cfb"
+ "method":"***"
 }
 ```
 
