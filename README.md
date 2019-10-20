@@ -17,13 +17,13 @@ sudo vim /etc/shadowsocks-libev/config.json
 
 ```json
 {
- "server":"***",
- "server_port":***,
- "local_address":"***",
+ "server":"{your_server}",
+ "server_port":{your_server_port},
+ "local_address":"{your-server}",
  "local_port":10800,
- "password":"***",
- "timeout":60,
- "method":"***"
+ "password":"{your_password}",
+ "timeout":600,
+ "method":"aes-256-cfb"
 }
 ```
 
@@ -82,8 +82,8 @@ sudo service polipo restart
 
 - ENV（Add to ~/.bashrc）
 ```json
-export HTTP_PROXY="socks5://127.0.0.1:10800"
-export HTTPS_PROXY="socks5://127.0.0.1:10800"
+export HTTP_PROXY="http://127.0.0.1:8123"
+export HTTPS_PROXY="https://127.0.0.1:8123"
 ```
 
 - Test if socks5 can connect google
