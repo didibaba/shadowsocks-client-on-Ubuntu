@@ -20,7 +20,7 @@ sudo vim /etc/shadowsocks-libev/config.json
  "server":"***",
  "server_port":***,
  "local_address":"***",
- "local_port":***,
+ "local_port":10800,
  "password":"***",
  "timeout":60,
  "method":"***"
@@ -51,12 +51,12 @@ add `sudo ss-local` before `exit 0`
 
 ## Global proxy
 
-- 安装polipo
+- Install polipo
 ```bash
 sudo apt-get install polipo
 ```
 
-- 增加配置文件
+- Edit config file
 ```bash
 sudo vim /etc/polipo/config
 ```
@@ -75,23 +75,18 @@ serverSlots = 16
 serverSlots1 = 32
 ```
 
-- 重启polipo服务
+- Restart polipo service
 ```json
 sudo service polipo restart
 ```
 
-- 设置环境变量（可添加至~/.bashrc文件中使所有shell均可实现全局SOCKS5访问）
+- ENV（Add to ~/.bashrc）
 ```json
-export HTTP_PROXY="http://127.0.0.1:8123"
-export HTTPS_PROXY="https://127.0.0.1:8123"
-```
-但是这样git clone 就用不了了，必须
-```bash
-unset HTTP_PROXY
-unset HTTPS_PROXY
+export HTTP_PROXY="socks5://127.0.0.1:10800"
+export HTTPS_PROXY="socks5://127.0.0.1:10800"
 ```
 
-- 检测一下是否可以通过socks5协议获取google主页面
+- Test if socks5 can connect google
 
 ```json
 curl www.google.com
