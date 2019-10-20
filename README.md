@@ -77,7 +77,7 @@ serverSlots1 = 32
 
 - Restart polipo service
 ```json
-sudo service polipo restart
+sudo /etc/init.d/polipo restart
 ```
 
 - ENV（Add to ~/.bashrc）
