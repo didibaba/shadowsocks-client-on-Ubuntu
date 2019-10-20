@@ -41,7 +41,7 @@ sudo ss-local
 sudo vim /etc/rc.local
 ```
 
-add `sudo ss-local` before `exit 0`
+add `nohup ss-local >/dev/null 2>&1 &` before `exit 0`
 
 
 
