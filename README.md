@@ -85,6 +85,10 @@ sudo service polipo restart
 export HTTP_PROXY="http://127.0.0.1:8123"
 export HTTPS_PROXY="https://127.0.0.1:8123"
 ```
+```json
+git config --global http.proxy socks5://localhost:10800
+git config --global https.proxy socks5://localhost:10800
+```
 
 - Test if socks5 can connect google
 
