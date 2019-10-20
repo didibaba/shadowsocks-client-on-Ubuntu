@@ -89,6 +89,10 @@ export HTTPS_PROXY="https://127.0.0.1:8123"
 git config --global http.proxy socks5://localhost:10800
 git config --global https.proxy socks5://localhost:10800
 ```
+```json
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+```
 
 - Test if socks5 can connect google
 
