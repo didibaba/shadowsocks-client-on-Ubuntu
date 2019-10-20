@@ -1,4 +1,4 @@
-# Ubuntu 16.04配置shadowsocks client
+# Ubuntu 16.04 shadowsocks client
 
 ## Install from PPA
 
