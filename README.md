@@ -77,7 +77,9 @@ serverSlots1 = 32
 
 - Restart polipo service
 ```json
-sudo /etc/init.d/polipo restart
+sudo service polipo stop
+sudo polipo socksParentProxy=localhost:10800
+sudo service polipo start
 ```
 
 - ENV（Add to ~/.bashrc）
