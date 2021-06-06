@@ -53,39 +53,27 @@ add `nohup ss-local >/dev/null 2>&1 &` before `exit 0`
 
 - Install polipo
 ```bash
-sudo apt-get install polipo
+sudo apt-get install privoxy
 ```
 
 - Edit config file
 ```bash
-sudo vim /etc/polipo/config
+sudo vim /etc/privoxy/config
 ```
-
-- add
-```json
-logSyslog = true
-logFile = /var/log/polipo/polipo.log
-proxyAddress = "0.0.0.0"
-socksParentProxy = "127.0.0.1:10800"
-socksProxyType = socks5
-chunkHighMark = 50331648
-objectHighMark = 16384
-serverMaxSlots = 64
-serverSlots = 16
-serverSlots1 = 32
+Find the section 5.2. forward-socks4, forward-socks4a, forward-socks5 and forward-socks5t, plus the following configuration:
+```bash
+forward-socks5 / 127.0.0.1:10800 .
 ```
 
 - Restart polipo service
 ```json
-sudo service polipo stop
-sudo polipo socksParentProxy=localhost:10800
-sudo service polipo start
+sudo /etc/init.d/privoxy restart
 ```
 
 - ENV（Add to ~/.bashrc）
 ```json
-export http_proxy=http://127.0.0.1:8123
-export https_proxy=https://127.0.0.1:8123
+export http_proxy=http://127.0.0.1:8118
+export https_proxy=https://127.0.0.1:8118
 ```
 ```json
 git config --global http.proxy socks5://localhost:10800
