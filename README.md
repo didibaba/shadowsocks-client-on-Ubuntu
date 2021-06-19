@@ -51,7 +51,7 @@ add `nohup ss-local >/dev/null 2>&1 &` before `exit 0`
 
 ## Global proxy
 
-- Install polipo
+- Install privoxy
 ```bash
 sudo apt-get install privoxy
 ```
@@ -65,7 +65,7 @@ Find the section 5.2. forward-socks4, forward-socks4a, forward-socks5 and forwar
 forward-socks5 / 127.0.0.1:10800 .
 ```
 
-- Restart polipo service
+- Restart privoxy service
 ```json
 sudo /etc/init.d/privoxy restart
 ```
