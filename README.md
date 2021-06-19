@@ -76,11 +76,11 @@ export http_proxy=http://127.0.0.1:8118
 export https_proxy=https://127.0.0.1:8118
 ```
 ```json
-git config --global http.proxy socks5://localhost:10800
-git config --global https.proxy socks5://localhost:10800
+git config --global http.proxy socks5://localhost:8118
+git config --global https.proxy socks5://localhost:8118
 
-git config --global http.https://github.com.proxy socks5://127.0.0.1:10800
-git config --global https.https://github.com.proxy socks5://127.0.0.1:10800
+git config --global http.https://github.com.proxy socks5://127.0.0.1:8118
+git config --global https.https://github.com.proxy socks5://127.0.0.1:8118
 ```
 ```json
 git config --global --unset http.proxy
