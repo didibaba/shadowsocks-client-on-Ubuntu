@@ -60,7 +60,7 @@ sudo vim /etc/proxychains.conf
 ```
 Add "socks5 127.0.0.1 10800" to ProxyList
 
-Then try
+- Use proxychains
 ```bash
 proxychains git clone xxxxxxxxx
 ```
