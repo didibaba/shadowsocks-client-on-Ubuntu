@@ -1,4 +1,4 @@
-# Ubuntu 16.04 shadowsocks client
+# Ubuntu shadowsocks client
 
 ## Install from PPA
 
@@ -44,16 +44,27 @@ sudo vim /etc/rc.local
 add `nohup ss-local >/dev/null 2>&1 &` before `exit 0`
 
 
-
 ## Config google chrome
 
 ![chrome_img](https://github.com/didibaba/shadowsocks-client-on-Ubuntu-16.04/blob/master/web/chrome.png)
+
+## Using proxy in terminal
+
+- Install proxychains
+```bash
+sudo apt install proxychains
+```
+- Config proxychains
+```bash
+sudo vim /etc/proxychains.conf
+```
+Add "socks5 127.0.0.1 10800" to ProxyList
 
 ## Global proxy
 
 - Install privoxy
 ```bash
-sudo apt-get install privoxy
+sudo apt-get install proxychains
 ```
 
 - Edit config file
