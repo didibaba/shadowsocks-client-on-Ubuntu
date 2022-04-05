@@ -64,47 +64,19 @@ Add "socks5 127.0.0.1 10800" to ProxyList
 ```bash
 proxychains git clone xxxxxxxxx
 ```
+## Using proxy in WSL 2
 
-## Global proxy
-
-- Install privoxy
+- Add following command to ~/.bashrc
 ```bash
-sudo apt-get install proxychains
+host_ip=$(cat /etc/resolv.conf |grep "nameserver" |cut -f 2 -d " ")
+export ALL_PROXY="http://$host_ip:10800"
 ```
-
-- Edit config file
 ```bash
-sudo vim /etc/privoxy/config
+source ~/.bashrc
 ```
-Find the section 5.2. forward-socks4, forward-socks4a, forward-socks5 and forward-socks5t, plus the following configuration:
+
+## Test if socks5 can connect google
+
 ```bash
-forward-socks5 / 127.0.0.1:10800 .
-```
-
-- Restart privoxy service
-```json
-sudo /etc/init.d/privoxy restart
-```
-
-- ENV（Add to ~/.bashrc）
-```json
-export http_proxy=http://127.0.0.1:8118
-export https_proxy=https://127.0.0.1:8118
-```
-```json
-git config --global http.proxy socks5://localhost:8118
-git config --global https.proxy socks5://localhost:8118
-
-git config --global http.https://github.com.proxy socks5://127.0.0.1:8118
-git config --global https.https://github.com.proxy socks5://127.0.0.1:8118
-```
-```json
-git config --global --unset http.proxy
-git config --global --unset https.proxy
-```
-
-- Test if socks5 can connect google
-
-```json
 curl www.google.com
 ```
