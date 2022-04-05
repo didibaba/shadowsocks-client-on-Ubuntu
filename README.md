@@ -60,6 +60,11 @@ sudo vim /etc/proxychains.conf
 ```
 Add "socks5 127.0.0.1 10800" to ProxyList
 
+Then try
+```bash
+proxychains git clone xxxxxxxxx
+```
+
 ## Global proxy
 
 - Install privoxy
