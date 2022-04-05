@@ -66,7 +66,7 @@ proxychains git clone xxxxxxxxx
 ```
 ## Using proxy in WSL 2
 
-- Add following command to ~/.bashrc
+- Add following commands to ~/.bashrc
 ```bash
 host_ip=$(cat /etc/resolv.conf |grep "nameserver" |cut -f 2 -d " ")
 export ALL_PROXY="http://$host_ip:10800"
