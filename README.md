@@ -2,6 +2,8 @@
 
 ## Install from PPA
 
+Shadowsocks-libev is included in Ubuntu repository since 17.04.
+
 ```bash
 sudo apt-get install software-properties-common -y
 sudo add-apt-repository ppa:max-c-lv/shadowsocks-libev -y
