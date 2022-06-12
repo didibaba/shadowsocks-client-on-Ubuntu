@@ -60,6 +60,7 @@ sudo apt install proxychains
 ```bash
 sudo vim /etc/proxychains.conf
 ```
+Remove default ProxyList content
 Add "socks5 127.0.0.1 10800" to ProxyList
 
 - Use proxychains
