@@ -19,13 +19,13 @@ sudo vim /etc/shadowsocks-libev/config.json
 
 ```json
 {
- "server":"$your_server",
- "server_port":$your_server_port,
- "local_address":"$your-server",
- "local_port":10800,
- "password":"$your_password",
- "timeout":600,
- "method":"aes-256-cfb"
+    "server":["$your_server", "127.0.0.1"],
+    "mode":"tcp_and_udp",
+    "server_port":$your_server_port,
+    "local_port":10800,
+    "password":"$your_password",
+    "timeout":600,
+    "method":"aes-256-gcm"
 }
 ```
 
