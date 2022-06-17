@@ -51,7 +51,7 @@ add `nohup ss-local >/dev/null 2>&1 &` before `exit 0`
 ![chrome_img](https://github.com/didibaba/shadowsocks-client-on-Ubuntu-16.04/blob/master/web/chrome.png)
 
 ## Using proxy in terminal
-
+(https://github.com/haad/proxychains)
 - Install proxychains
 ```bash
 sudo apt install proxychains
