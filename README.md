@@ -54,7 +54,10 @@ add `nohup ss-local >/dev/null 2>&1 &` before `exit 0`
 (https://github.com/haad/proxychains)
 - Install proxychains
 ```bash
-sudo apt install proxychains
+sudo apt install proxychains tor
+```
+```bash
+sudo service tor start
 ```
 - Config proxychains
 ```bash
